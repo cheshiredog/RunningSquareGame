@@ -10,12 +10,25 @@ public class Mover : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        PrintInsructions();
     }
 
     // Update is called once per frame
     void Update()
-    {   // Movement on x axis
+    {   
+        MovePlayer();
+    }
+
+    // Printing message for the player to the console
+    void PrintInsructions()
+    {
+        Debug.Log("Welcome to the game. \n You can move this blue square with W A S D keys. \n Thanks for playing, have fun. :)");
+    }
+
+    // Moving player
+    void MovePlayer()
+    {
+        // Movement on x axis
         float xValue = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
         // Movement on z axis
         float zValue = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
