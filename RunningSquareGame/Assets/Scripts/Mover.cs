@@ -33,6 +33,7 @@ public class Mover : MonoBehaviour
         // Movement on z axis
         float zValue = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
 
+        // Player's moving
         transform.Translate(xValue, 0, zValue);
     }
 }
