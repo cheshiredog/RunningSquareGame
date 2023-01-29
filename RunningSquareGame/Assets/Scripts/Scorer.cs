@@ -11,7 +11,7 @@ public class Scorer : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         // Checking if the obstacle hasn't been hit before
-        if(collision.gameObject.tag != "Hit")
+        if(collision.gameObject.tag != "Hit" & collision.gameObject.tag != "Ramp")
         {
             // Increasing player's score
             hits++;
